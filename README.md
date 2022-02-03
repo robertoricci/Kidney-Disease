@@ -7,7 +7,7 @@
 
 ## Notebook
 
-https://raw.githubusercontent.com/https://raw.githubusercontent.com/robertoricci/Kidney-Disease/Images/Kidney.ipynb
+https://github.com/robertoricci/Kidney-Disease/blob/main/Images/Kidney.ipynb
 
 ## Demo
 
@@ -39,53 +39,38 @@ https://raw.githubusercontent.com/https://raw.githubusercontent.com/robertoricci
 - Flask
 
   
-## Running Tests
-
-To run app, run the following command
-
-```bash
-  python app.run
-```
-
-```cmd
-  flask run
-```
-
-  
-## Screenshots
-
-![App Screenshot](https://raw.githubusercontent.com/https://raw.githubusercontent.com/robertoricci/Kidney-Disease/Images/Rins.jpeg)
-
-  
 ## Deployment
 
 To deploy this project run following command in the project folder
 
+# Clone the code repository
 ```bash
-  git bash open
+  https://github.com/robertoricci/Kidney-Disease.git
 ```
 
-Create .git file
+# virtualenv venv
 ```bash
-  git init
-```
-Track all the files
-```bash
-  git add .
-```
-Cheacking file track or not
-```bash
-  git status
-```
-Store as separate version
-```bash
-  git commit -m 'message'
+  python -m venv .venv
 ```
 
-Push
+# virtualenv activate
 ```bash
-  git push
+  source env/bin/activate
 ```
+
+# Install 
+```bash
+  pip install -r requirements.txt
+```
+
+# Runn 
+```bash
+  flask run
+```
+
+## Screenshots
+
+![App Screenshot](https://raw.githubusercontent.com/https://raw.githubusercontent.com/robertoricci/Kidney-Disease/Rins.jpeg)
 
 ### Deployment on Heroku
 
@@ -107,6 +92,7 @@ Push code to Master Branch
 ```bash
   git push heroku main
 ```
+
   
 ## Feedback
 
