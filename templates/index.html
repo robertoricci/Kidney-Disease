@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Previsão de Doenças Renais</title>
+
+</head>
+<body>
+    <div style="color:black;" class="container">
+        <h2 class='container-heading'><span class="heading_font">Sistema de Previsão de Doenças Renais</span></h2>
+    </div>
+
+    <div style="color:black;" class="ml-container">
+       
+        <form action="{{ url_for('predict') }}" method="POST">
+            <br>
+            <br>
+            <h3>Gravidade Específica (Ex: (1.005,1.010,1.015,1.020,1.025))</h3>
+            <input id="first" name="sg" placeholder="Ex: (1.005,1.010,1.015,1.020,1.025)" required="required">
+            <br>
+            <h3>Hiper Tensão </h3>
+            <select id="second" name="htn" class="form-control">
+                <option value="0">Não</option>
+                <option value="1">Sim</option>
+           </select>
+            <br>
+            <h3>Hemoglobina (em gms)</h3>
+            <input id="third" name="hemo" placeholder="em gms" required="required">
+            <br>
+            <h3>Diabetes Mellitus</h3>
+            <select id="fourth" name="dm" class="form-control">
+                <option value="0">Não</option>
+                <option value="1">Sim</option>
+           </select>
+
+            <br>
+            <h3>Albumina (0,1,2,3,4,5) </h3>
+            <input id="fifth" name="al" placeholder="(0,1,2,3,4,5)" required="required" min="0" max="5">
+            <br>
+            <h3>Apetite</h3>
+            <select id="sixth" name="appet" class="form-control">
+                <option value="0">Ruim</option>
+                <option value="1">Bom</option>
+           </select>
+            <br>
+            <h3>Contagem Glóbulos Vermelhos (Em Milhoes / cmm) </h3>
+            <input id="seventh" name="rc"  placeholder="Em Milhoes / cmm" required="required">
+            <br>
+            <h3>Celula de Pus </h3>
+            <select id="eight" name="pc" class="form-control">
+                <option value="0">Normal</option>
+                <option value="1">Anormal</option>
+           </select>
+            <br>
+            <br>
+            <button id="sub" type="submit ">Enviar</button>
+            <br>
+            <br>
+            <br>
+            <p class='footer-description'>©2022 Roberto Carlos Ricci</p>
+
+        </form>
+    </div>
+
+<style>
+
+
+/* Background Image */
+body
+{
+background-image:url("https://uploaddeimagens.com.br/images/003/703/960/original/Rins.png?1643884323");
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+
+}
+
+/* Color */
+body{
+	font-family: Arial, Helvetica,sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+h3{
+  color: #FFF;
+}
+
+.footer-description{
+    color: #FFF;
+}
+
+/* Heading Font */
+.container-heading{
+    margin: 0;
+}
+
+.heading_font{
+    color: #FFFF;
+	font-family: 'Pacifico', cursive;
+	font-size: 50px;
+	font-weight: normal;
+}
+
+/* Box */
+        #first {
+            border-radius: 14px;
+            height: 30px;
+            width: 300px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 25px;
+            height: 30px;
+            width: 160px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            width: 160px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fourth {
+            border-radius: 25px;
+            height: 30px;
+            width: 160px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fifth {
+            border-radius: 14px;
+            height: 25px;
+            width: 130px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #sixth {
+            border-radius: 25px;
+            height: 30px;
+            width: 200px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #seventh {
+            border-radius: 14px;
+            height: 25px;
+            width: 180px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #eight {
+            border-radius: 20px;
+            height: 30px;
+            width: 260px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+
+/* Submit Button */
+#sub {
+        width: 120px;
+        height: 43px;
+        text-align: center;
+        border-radius: 14px;
+        font-size: 18px;
+        background-color: #FFF;
+        cursor: pointer;
+        }
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</style>
+
+</body>
+
+</html>
+
+

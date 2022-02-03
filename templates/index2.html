@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Sistema de Previsão de Doenças Renais</title>
+  </head>
+  <body>
+
+
+	<div class="container">
+		<h1>Sistema de Previsão de Doenças Renais</h1>	
+		<form action="{{ url_for('predict') }}" method="post">
+        <div class="form-group row">
+            <label for="sg" class="col-sm-2 col-form-label">Specific Gravity</label>
+            <div class="col-sm-3">
+                <input  class="form-control"  name="sg" placeholder="Ex: (1.005,1.010)" required="required" >
+            </div>
+        </div>
+		  <fieldset class="form-group">
+			<div class="row">
+			  <legend class="col-form-label col-sm-2 pt-0">Hiper Tensão</legend>
+			  <div class="col-sm-10">
+				<div class="form-check">
+				  <input class="form-check-input" type="radio" name="htn" id="gridRadios1" value="1" checked>
+				  <label class="form-check-label" for="gridRadios1">
+					Sim
+				  </label>
+				</div>
+				<div class="form-check">
+				  <input class="form-check-input" type="radio" name="htn" id="gridRadios2" value="0">
+				  <label class="form-check-label" for="gridRadios2">
+					Não
+				  </label>
+				</div>
+			  </div>
+			</div>
+		  </fieldset>
+          <div class="form-group row">
+            <label for="sg" class="col-sm-2 col-form-label">Hemoglobina(em GMS)</label>
+            <div class="col-sm-3">
+                <input  class="form-control"  name="hemo"  required="required" >
+            </div>
+          </div>
+          <fieldset class="form-group">
+			<div class="row">
+			  <legend class="col-form-label col-sm-2 pt-0">Diabetes Mellitus</legend>
+			  <div class="col-sm-10">
+				<div class="form-check">
+				  <input class="form-check-input" type="radio" name="dm" id="gridRadios1" value="1" checked>
+				  <label class="form-check-label" for="gridRadios1">
+					Sim
+				  </label>
+				</div>
+				<div class="form-check">
+				  <input class="form-check-input" type="radio" name="dm" id="gridRadios2" value="0">
+				  <label class="form-check-label" for="gridRadios2">
+					Não
+				  </label>
+				</div>
+			  </div>
+			</div>
+		  </fieldset>
+
+          <br>
+
+		  <div class="form-group row">
+			<label for="dependentes" class="col-sm-2 col-form-label">Albumina</label>
+			<div class="col-sm-3">
+			  <input type="number" class="form-control"  placeholder="(0,1,2,3,4,5)"  value="0" name="al" min="0" max="5">
+			</div>
+		  </div>
+          <fieldset class="form-group">
+			<div class="row">
+			  <legend class="col-form-label col-sm-2 pt-0">Apetite</legend>
+			  <div class="col-sm-10">
+				<div class="form-check">
+				  <input class="form-check-input" type="radio" name="appet" id="gridRadios1" value="1" checked>
+				  <label class="form-check-label" for="gridRadios1">
+					Bom
+				  </label>
+				</div>
+				<div class="form-check">
+				  <input class="form-check-input" type="radio" name="appet" id="gridRadios2" value="0">
+				  <label class="form-check-label" for="gridRadios2">
+					Ruim
+				  </label>
+				</div>
+			  </div>
+			</div>
+		  </fieldset>  
+          
+          <div class="form-group row">
+			<label for="dependentes" class="col-sm-2 col-form-label">Contagem Glóbulos Vermelhos(Em milhoes/cmm) </label>
+			<div class="col-sm-3">
+			  <input class="form-control"   name="rc"  required="required" >
+			</div>
+		  </div>
+          
+          <div class="form-group row">
+			<div class="col-sm-2">Celula de Pus</div>
+			<div class="col-sm-3">
+			  <select name="pc" class="form-control">
+					<option value="0">Normal</option>
+					<option value="1">Abnormal</option>
+			  </select>
+			</div>
+		  </div>
+		  <div class="form-group row">
+			<div class="col-sm-12">
+			  <button  id="sub" type="submit" class="btn btn-primary btn-block">Verificar</button>
+			</div>
+		  </div>
+		</form>
+
+		<!-- {% if classe %} -->
+			{% if classe == "1" %}
+				<div style="display:table-cell; vertical-align:middle; text-align:center">
+					<img src="static/approved.jpeg" width="300px" height="175px" align="center">
+				</div>
+			{% else %}
+				<div style="display:table-cell; vertical-align:middle; text-align:center">
+					<img src="static/denied.jpg" width="300px" height="175px" align="center">
+				</div>
+			{% endif %}
+		<!-- {% endif %} -->
+	<!-- FIM DO CONTAINER-->
+	</div>
+
+<style>
+
+.container {
+width: 100%; /* this make container fluid*/
+height: auto;
+margin-right: auto; /* this make content center*/
+margin-left: auto; /* this make content center*/
+}
+body
+{
+background-image:url("");
+height: 100%;
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+font-family: Arial, Helvetica,sans-serif;
+
+}
+
+#sub {
+    width: 120px;
+    height: 43px;
+    text-align: center;
+    border-radius: 14px;
+    font-size: 18px;
+}
+
+
+</style>
+
+	
+		<!-- Optional JavaScript -->
+		<!-- onkeyup="formatarMoeda2();" -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<script>
+	  function formatarMoeda() {
+	  var elemento = document.getElementById('rendimento');
+	  var valor = elemento.value;
+	  
+	  valor = valor + '';
+	  valor = parseInt(valor.replace(/[\D]+/g,''));
+	  valor = valor + '';
+	  valor = valor.replace(/([0-9]{2})$/g, ".$1");
+
+	  if (valor.length > 6) {
+		valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1.$2");
+	  }
+
+	  elemento.value = valor;
+	  }
+	</script>
+	<script>
+	  function formatarMoeda2() {
+	  var elemento = document.getElementById('valoremprestimo');
+	  var valor = elemento.value;
+	  
+	  valor = valor + '';
+	  valor = parseInt(valor.replace(/[\D]+/g,''));
+	  valor = valor + '';
+	  valor = valor.replace(/([0-9]{2})$/g, ".$1");
+
+	  if (valor.length > 6) {
+		valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1.$2");
+	  }
+
+	  elemento.value = valor;
+	  }
+	</script>
+  </body>
+  
+</html>
+
