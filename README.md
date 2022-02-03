@@ -1,14 +1,17 @@
 
-# Chronic Kidney Disease Prediction Project ❤
+# Kidney Disease Prediction Project ❤
 
 #### If you want to view the deployed model, click on the following link:
 
-• https://kidney-disease.herokuapp.com/
+• https://app-kidney-disease.herokuapp.com/
+
+## Notebook
+
+https://raw.githubusercontent.com/https://raw.githubusercontent.com/robertoricci/Kidney-Disease/Images/Kidney.ipynb
 
 ## Demo
 
-<img src="https://raw.githubusercontent.com/robertoricci/Kidney-Disease/main/Images/gif.gif">
-<img src="https://raw.githubusercontent.com/robertoricci/Kidney-Disease/main/Images/gif2.gif">
+<img src="https://raw.githubusercontent.com/robertoricci/Kidney-Disease/main/Images/Demo.gif">
 
 
 ![App Screenshot](https://thumbs.gfycat.com/IdolizedAmbitiousHawk-size_restricted.gif)
@@ -78,6 +81,12 @@ Store as separate version
 ```bash
   git commit -m 'message'
 ```
+
+Push
+```bash
+  git push
+```
+
 ### Deployment on Heroku
 
 Heroku login on git bash
@@ -96,7 +105,7 @@ Push Code
 ```
 Push code to Master Branch
 ```bash
-  git push heroku master
+  git push heroku main
 ```
   
 ## Feedback
