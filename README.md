@@ -7,8 +7,8 @@
 
 ## Demo
 
-<img src="https://raw.githubusercontent.com/SagarDhandare/Chronic-Kidney-Disease/main/Images/gif.gif">
-<img src="https://raw.githubusercontent.com/SagarDhandare/Chronic-Kidney-Disease/main/Images/gif2.gif">
+<img src="https://raw.githubusercontent.com/robertoricci/Kidney-Disease/main/Images/gif.gif">
+<img src="https://raw.githubusercontent.com/robertoricci/Kidney-Disease/main/Images/gif2.gif">
 
 
 ![App Screenshot](https://thumbs.gfycat.com/IdolizedAmbitiousHawk-size_restricted.gif)
@@ -32,8 +32,8 @@
 - Flask
 - HTML
 - CSS
-- Pycharm
 - Heroku
+- Flask
 
   
 ## Running Tests
@@ -44,10 +44,14 @@ To run app, run the following command
   python app.run
 ```
 
+```cmd
+  flask run
+```
+
   
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/SagarDhandare/Chronic-Kidney-Disease-Prediction-Project/main/Images/screenshot.png)
+![App Screenshot](https://raw.githubusercontent.com/https://raw.githubusercontent.com/robertoricci/Kidney-Disease/Images/Rins.jpeg)
 
   
 ## Deployment
@@ -97,7 +101,7 @@ Push code to Master Branch
   
 ## Feedback
 
-If you have any feedback, please reach out to me at https://www.linkedin.com/in/sagardhandare/
+If you have any feedback, please reach out to me at https://www.linkedin.com/in/roberto-carlos-ricci/
 
 Please do ⭐ the repository, if you like this 😊
 
