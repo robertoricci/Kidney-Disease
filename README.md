@@ -8,9 +8,20 @@
 The aim of this project is to analyze a dataset in order to develop a machine learning model and predict Kidney Disease Prediction 
 to Marathon data science  https://cientistadedadosnapratica.com.br/jornada_fev22?blog=z8te2pr0&video=29djsmyi3  in  https://cienciadosdados.com
 
+<br>
+<br>
+
 <img width="833" height="250" style="display: block; margin-left: auto; margin-right: auto" src="https://static.wixstatic.com/media/1bf968_9c6c3e2f3c70469cab5b5ccabfdab367.gif">
 
-Using GradientBoost and RandomForest algorithm
+
+Using algorithm
+
+###GradientBoost 
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html 
+
+###RandomForest 
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+
   
 ## Notebook
 
@@ -63,7 +74,7 @@ virtualenv venv
 
 virtualenv activate
 ```bash
-  source env/bin/activate
+  source env\Scripts\activate
 ```
 
  Install 
